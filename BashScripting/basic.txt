@@ -1,0 +1,56 @@
+echo $0 - check a console type.  
+whoami - check user.  
+cat /etc/shells - list all supported shells  
+
+for creating fles we can use a file and and .sh extension  
+#!/bin/bash - defining which console type we are using    
+echo "Hello world" - sending output to terminal  
+
+ls -ltr - check permission  
+chmod +x filename - giving permission  
+./script.sh - running script require x permission to run  
+/path/script.js - with path  
+or  
+bash script.sh - running script but runs even without x permission  
+
+
+Comments:
+# - used as a comment     
+<<comment     
+...    
+comment goes here   
+...  
+comment  
+
+
+Variables:
+myVar=2 - stores 2 in myVar
+name="Deepak Ghimire"
+
+echo "$myVar"
+echo "My name is $myVar"
+
+Note: in bash variables are mutable but can also use constant variables
+
+storing output of a command:
+myVar=$(whoami) - stores a hostname command output in myVar variable.
+
+Constant Variable:
+readonly myVar="Hello" - constant variable can't be changed no more
+
+
+Arrays:
+myArray=(Hello 1 2 "Hiii") 
+ 
+get values of array using indexes:
+echo ${myArray[0]} 
+echo ${myArray[1]}
+echo ${myArray[*]} - here * means every eleents in an array
+echo ${#myArray[*]} - check length
+
+get specific range values
+echo ${myArray[*]:1}
+echo ${myArray[*]:1:2}
+
+update an Array:
+myArray+=(9 10)
